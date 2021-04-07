@@ -7,5 +7,13 @@ const LaptopSchema = mongoose.Schema({
     {type: Number, required:true}
 })
 
+const UserSchema = mongoose.Schema({
+    email:
+    {type: String , required:true},
+    password:
+    {type: String,required:true}
+})
+
 const laptop = mongoose.model('laptop', LaptopSchema);
-export default laptop;
+const User = mongoose.model("User", UserSchema);
+export{laptop,User};

@@ -1,7 +1,8 @@
-import laptopRoute from '../routes/laptopRouter';
-
+import  laptopRoute  from "../routes/laptopRouter";
+import UserRoute  from "../routes/UserRouter";
 const ROUTES = {
-    LAPTOP : laptopRoute
-}
+  LAPTOP: laptopRoute,
+  USER: UserRoute,
+};
 
 export default ROUTES;

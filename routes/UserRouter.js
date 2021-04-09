@@ -9,8 +9,8 @@ UserRoute.get("/login",(_req,res)=>{
 UserRoute.get("/register",(_req,res)=>{
     res.send("Register");
 })
-UserRoute.post("/register",(req,res)=>{
-    console.log(req.body)
+UserRoute.post("/register",(req,_res)=>{
+   // console.log(req.body)
     
     const newUser = new User({
         email: req.body.username,
@@ -31,6 +31,27 @@ UserRoute.post("/register",(req,res)=>{
         console.log(e)
     }
     // res.send("LOL");
-})
+});
+
+UserRoute.post("/login", (req,res)=>{
+    
+    const email= req.body.username;
+    const password= req.body.password;
+    
+    User.findOne({email:email},(err,foundUser)=>{
+        console.log(req.body)
+        if(err){
+            console.log(err);
+        }
+        else{
+            if(foundUser){
+                if(foundUser.password=== password){
+                    res.send("successfully login")
+                }
+            }
+        }
+    })
+
+});
 
 export default UserRoute;

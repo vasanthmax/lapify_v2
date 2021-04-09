@@ -2,14 +2,14 @@ import { Router } from "express";
 import { User } from "../models/laptop";
 
 
-const UserRoute = Router();
-UserRoute.get("/login",(_req,res)=>{
+const userRoute = Router();
+userRoute.get("/login",(_req,res)=>{
     res.send("login");
 })
-UserRoute.get("/register",(_req,res)=>{
+userRoute.get("/register",(_req,res)=>{
     res.send("Register");
 })
-UserRoute.post("/register",(req,_res)=>{
+userRoute.post("/register",(req,_res)=>{
    // console.log(req.body)
     
     const newUser = new User({
@@ -33,7 +33,7 @@ UserRoute.post("/register",(req,_res)=>{
     // res.send("LOL");
 });
 
-UserRoute.post("/login", (req,res)=>{
+userRoute.post("/login", (req,res)=>{
     
     const email= req.body.username;
     const password= req.body.password;
@@ -54,4 +54,4 @@ UserRoute.post("/login", (req,res)=>{
 
 });
 
-export default UserRoute;
+export default userRoute;

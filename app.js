@@ -16,8 +16,3 @@ app.use("/laptopRouter", ROUTES.LAPTOP);
 app.use("/user", ROUTES.USER);
 
 console.log(process.env.MONGO_URI)
-
-
-
-
-

@@ -1,0 +1,11 @@
+addReviewers: true
+
+addAssignees: true
+
+reviewers:
+  - AshutoshPatole
+
+skipKeywords:
+  - wip
+
+numberOfReviewers: 0

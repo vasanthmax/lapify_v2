@@ -1,5 +1,5 @@
 require("dotenv").config();
-import mongoose from "mongoose" 
+import mongoose from "mongoose" ;
 import express from "express";
 import ROUTES from "./constants/routes";
 import connectDatabase from './connectDB';

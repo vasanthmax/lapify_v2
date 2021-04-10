@@ -1,5 +1,4 @@
 import { Router } from "express";
-import {User} from "../models/laptop"
 const laptopRoute = Router();
 
 
